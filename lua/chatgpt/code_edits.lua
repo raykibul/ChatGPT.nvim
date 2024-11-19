@@ -45,7 +45,7 @@ local build_edit_messages = function(input, instructions, use_functions_for_edit
       "Apply the changes requested by the user to the code. Output ONLY the changed code and a brief description of the edits. DO NOT wrap the code in a formatting block. DO NOT provide other text or explanation."
   else
     system_message_content =
-      "DO NOT wrap the code in a formatting block. DO NOT provide other text or explanation if not asked. Apply the changes or what user asks to the provided code"
+      "Please DO NOT wrap the code in a formatting block when  you're generating code blocks. DO NOT provide other text or explanation if not asked. Apply the changes or what user asks to the provided code. "
   end
   local messages = {
     {

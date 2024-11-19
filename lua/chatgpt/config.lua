@@ -181,7 +181,7 @@ function M.defaults()
       model = "gpt-4o",
       frequency_penalty = 0,
       presence_penalty = 0,
-      temperature = 0.6,
+      temperature = 0.5,
       top_p = 1,
       n = 1,
       max_tokens= 3000,
