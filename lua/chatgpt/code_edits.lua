@@ -44,8 +44,12 @@ local build_edit_messages = function(input, instructions, use_functions_for_edit
     system_message_content =
       "Apply the changes requested by the user to the code. Output ONLY the changed code and a brief description of the edits. When replying only code , do not response in markdown. DO NOT wrap the code in a formatting block. DO NOT provide other text or explanation."
   else
-    system_message_content =
-      "Please DO NOT wrap the code in a formatting block when  you're generating code blocks. DO NOT provide other text or explanation if not asked. Also when you reply only code changes then reply in normal format. do not use markdown while reponding only code changes. Apply the changes or what user asks to the provided code. "
+  system_message_content = [[
+    Please DO NOT wrap the code in a formatting block when you're generating code blocks. 
+    DO NOT provide other text or explanation if not asked. Also when you reply only code changes 
+    then reply in normal format. do not use markdown while responding only code changes. 
+    Apply the changes or what user asks to the provided code maintaining code formating like spacing and tabs.
+  ]]
   end
   local messages = {
     {
